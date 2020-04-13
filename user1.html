@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>User</title>
+	<style>
+		html{
+			width: 100vw;
+			height: 100vh;
+			background: #9FF;
+		}
+		input{
+			width: 20vw;
+			height: 4vh;
+			float: left;
+			margin-right: 20vw;
+			font-size: 3vh;
+			text-align: center;
+			margin-left: 3vw; 
+			margin-top: 15vh;
+		}
+		button{
+			width: 40vw;
+			height: 8vh;
+			float: left;
+			font-size: 3vh;
+			margin-left: 20vw;
+			margin-top: 15vh;
+		}
+		#bg1{
+			width: 80vw;
+			height: 80vh;
+			margin-left: 10vw;
+			margin-top: 10vh;
+			background: rgba(100%,100%,100%,0.8);
+			border-radius: 0px 50px 50px 50px;
+		}
+		#sw1{
+			width: 20%;
+			height: 5vh;
+			margin-left: 0%;
+			margin-top: -5vh;
+			background: rgba(100%,100%,100%,0.8);
+			border-radius: 50px 50px 0px 0px;
+			float: left;
+			text-align:center;
+			line-height:5vh;
+			font-size: 3vh;
+			user-select: none;
+		}
+		#sw2{
+			width: 20%;
+			height: 5vh;
+			margin-left: 20%;
+			margin-top: -5vh;
+			background: rgba(90%,90%,90%,0.8);
+			border-radius: 50px 50px 0px 0px;
+			float: left;
+			text-align:center;
+			line-height:5vh;
+			font-size: 3vh;
+			user-select: none;
+		}
+	</style>
+</head>
+
+<!-- 連接firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCfNgfZwJBjnsZqVuCwN8V0RFHoiJVVDmc",
+        authDomain: "electronicproject-998b9.firebaseapp.com",
+        databaseURL: "https://electronicproject-998b9.firebaseio.com",
+        projectId: "electronicproject-998b9",
+        storageBucket: "electronicproject-998b9.appspot.com",
+        messagingSenderId: "992408476982",
+        appId: "1:992408476982:web:0abb2de57e0fcff4c72797",
+        measurementId: "G-0TY339KS71"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
+
+</script>
+
+<body>
+	
+	<div id="bg1">
+		<!--　　　　 頂部選擇　　　　 -->
+		<div id="sw1" onclick="sw2to1()">
+			一般登入
+		</div>
+		<div id="sw2" onclick="sw1to2()">
+			管理者登入
+		</div>
+		<!-- 　　　　登入介面　　　　 -->
+		<div id="login1">
+			<div style="margin-left: 25vw; margin-top: 15vh; float:left; font-size: 3vh">帳號：</div>
+			<input id="Account1" type="text" value="test0">
+
+			<div style="margin-left: 25vw; margin-top: 15vh; float:left; font-size: 3vh">密碼：</div>
+			<input id="Password1" type="password" value="123456">
+
+			<button onclick="login1()">登　入</button>			
+		</div>
+
+	</div>
+</body>
+
+
+</html>
