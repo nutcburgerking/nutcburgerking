@@ -83,6 +83,7 @@
 						firebase.database().ref("User/"+account+"/key").push(1);
 						firebase.database().ref("User/"+account+"/key").once('value',function(key){
 							key=key.val()
+							console.log("mykey="+Object.keys(key)[0]);
 							document.cookie="mykey="+Object.keys(key)[0];							
 						});
 						alert("登入成功");
